@@ -1,0 +1,43 @@
+<view class="container">
+  <!--广告栏-->
+   <swiper indicator-dots="true" autoplay="true" class="swiper">
+       <swiper-item class="swiper-item">
+         <image class="item-image"  src="../../images/one.jpg" mode="aspectFill" />
+       </swiper-item>
+       <swiper-item class="swiper-item">
+         <image class="item-image" src="../../images/two.png" mode="aspectFill" />
+       </swiper-item>
+   </swiper>
+  <view class="wrap">
+  <!--按钮切换-->
+    <view class="btn" bindtap="changeBtn">
+      <view class="{{currentIndex==0?'active':''}}" data-index="0">搜索购票</view>
+  	  <view class="{{currentIndex==1?'active':''}}" data-index="1">极速抢票</view>
+    </view>
+
+    <!--城市选择-->
+    <view class="chooseCity pd-70">
+  		<view class="citySelect">
+  			<view class="startCity" bindtap="selectCity" data-type="1">{{startCity}}</view>
+  			<view class="citySelect_img">
+                  <view catchtap="rotate_img" animation="{{animation}}">
+                    <image class="changeCity_bg"></image>
+                  </view>
+  			</view>
+  			<view class="endCity" bindtap="selectCity" data-type="2">{{endCity}}</view>
+  		</view>
+
+      <view class="chooseDate">
+        <block>
+          <picker mode="date" value="{{FSdate.currentday}}" start="{{FSdate.startday}}" bindchange="bingDateChange" data-type='1'>
+            <view class="startDate">
+              <text class="date">{{FSdate.date}}</text>
+              <text class="week">{{FSdate.week}}出发</text>
+            </view>
+          </picker>
+        </block>
+      </view>
+    </view>
+    <button class="sureBtn" bindtap="searchProduct">搜索</button>
+  </view>
+</view>

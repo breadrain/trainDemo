@@ -1,0 +1,90 @@
+.listTitleWrap{
+   position: fixed;
+   left: 0;
+   right: 0;
+   z-index: 2;
+   min-width: 290px;
+   height: 44px;
+   line-height: 44px;
+   background:#f8f8f8;
+   padding:0 10px 0 15px;
+   border-bottom: 1px solid #eaeaea;
+}
+.listTitle{
+    display: block;
+    text-align: center;
+    color: #3cc;
+    font-size: 40rpx;
+}
+
+.listWrap{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    top: 44px;
+}
+.listItemWrap{
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+    padding: 10px;
+    border-bottom: 1px solid #ececec;
+}
+.list-cell{
+    display: flex;
+    flex-direction: column;
+}
+.list-cell-1{
+    width: 18%;
+}
+.list-cell-2{
+    width: 33%;
+}
+.list-cell-3{
+    width: 21%;
+}
+.list-cell-4{
+    width: 28%;
+    text-align: right;
+}
+.lists-lighter{
+    font-size: 28rpx;
+    color: #666;
+}
+.listTop{
+    font-size: 32rpx;
+}
+.list-station{
+    display: inline-block;
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 5px;
+    border-radius: 10px;
+    font-size:20rpx;
+    text-align: center;
+}
+
+.list-startStation{
+    color: #3cc;
+    border: 1px solid #3cc;
+}
+
+.list-endStation{
+    color: #39c381;
+    border: 1px solid #39c381;
+}
+
+.list-price{
+    color: #f90;
+}
+
+.list-threshold{
+    color: #f90;
+    padding: 0 2px
+}
+.lists-sub{
+    display: inline-block;
+    line-height: 96rpx;
+    font-size: 32rpx;
+    color: #f30;
+}

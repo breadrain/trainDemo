@@ -1,0 +1,57 @@
+<view class="container">
+    <view>
+        <view class="listTitleWrap"><text class="listTitle">{{date.day}} {{date.week}}</text></view>
+    </view>
+    <view class="contentWrap">
+        <view class="contentItemWrap">
+            <view class="content">
+                <view class="left">
+                    <text class="city">{{trainList.from}}</text>
+                    <text class="time">{{trainList.startTime}}</text>
+                    <view class="data">
+                        <text>{{date.day}}</text>
+                        <text class="space">{{date.week}}</text>
+                    </view>
+                </view>
+                <view class="middle">
+                    <view class="trainName">
+                        <text class="trainTitle">{{trainList.trainNo}}</text>
+                        <text class="trainType">{{trainList.trainType}}</text>
+                    </view>
+                    <view class="trainMid">
+                        <text class="trainMid-left"></text>
+                        <text class="timer">时刻表</text>
+                        <text  class="trainMid-right"></text>
+                    </view>
+                    <text class="trainTime">耗时{{trainList.duration}}</text>
+                </view>
+                <view class="right">
+                   <text class="city">{{trainList.to}}</text>
+                   <text class="time">{{trainList.endTime}}</text>
+                   <view class="data">
+                       <text>{{curTime}}</text>
+                       <text class="space">{{curWeek}}</text>
+                   </view>
+                </view>
+            </view>
+        </view>
+        <view class="seat-detail">
+           <block wx:for="{{trainList.seatInfos}}" wx:for-item="seatInfo">
+                <view class="seatWrap">
+                    <text class="seat">{{seatInfo.seat}}</text>
+                    <text class="price">¥{{seatInfo.seatPrice}}</text>
+                    <view class="seatBtnWap">
+                        <view class="btnGroup" wx:if="{{seatInfo.remainNum > 0}}">
+                            <text class="num">{{seatInfo.remainNum}}张</text>
+                            <button class="seatOrd" type="default" plain="false"> 预订</button>
+                        </view>
+                        <view class="btnGroup" wx:else>
+                            <text class="num">抢票</text>
+                            <button class="seatOrd" type="default" plain="false" disabled="false">预订</button>
+                        </view>
+                    </view>
+                </view>
+           </block>
+        </view>
+    </view>
+</view>

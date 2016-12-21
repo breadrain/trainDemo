@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/welcome/welcome",
+    "pages/posts/post",
+    "pages/selectStartCity/selectStartCity",
+    "pages/trainList/trainList",
+    "pages/seat/seat"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#405f80"
+  }
+}

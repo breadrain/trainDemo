@@ -1,0 +1,149 @@
+.listTitleWrap{
+   position: fixed;
+   left: 0;
+   right: 0;
+   z-index: 2;
+   min-width: 290px;
+   height: 44px;
+   line-height: 44px;
+   background:#f8f8f8;
+   padding:0 10px 0 15px;
+   border-bottom: 1px solid #eaeaea;
+}
+.listTitle{
+    display: block;
+    text-align: center;
+    color: #3cc;
+    font-size: 40rpx;
+}
+
+.contentWrap{
+    position: relative;
+    top: 44px;
+}
+.contentItemWrap{
+    padding: 0 15px;
+    border-bottom: 1px solid #eaeaea;
+    background: #fff;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    padding: 22px 0;
+}
+.left{
+    width: 30%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.middle{
+    width: 115px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.middle .trainName{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    top: 5px;
+    font-size: 28rpx;
+    color: #666;
+}
+
+.middle .trainMid{
+    padding:13px 0;
+}
+.middle .trainMid .trainMid-left,.middle .trainMid .trainMid-right{
+    display: inline-block;
+    width: 22px;
+    height: 1px;
+    margin-bottom: 4px;
+    font-size: 0;
+    background: #000;
+}
+
+.middle .trainMid .timer{
+    padding: 0 10px;
+    font-size: 24rpx;
+    color: #3cc;
+}
+.middle .trainTime{
+    position: relative;
+    top: -7px;
+    font-size: 28rpx;
+    color: #666;
+}
+
+.right{
+    width: 30%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+.city{
+    font-size: 32rpx;
+}
+.time{
+    font-size: 48rpx;
+    color: #333;
+}
+.date{
+    font-size: 28rpx;
+    color: #333;
+}
+.space{
+    padding-left: 5px;
+}
+.seat-detail{
+    overflow: hidden;
+    margin: 15px 0;
+    border-top: 1px solid #eaeaea;
+    background-color: #f8f8f8;
+}
+.seatWrap{
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+    overflow: hidden;
+    line-height: 42px;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fff;
+}
+.seatWrap .seat{
+    font-size: 32rpx;
+    padding-right: 15px;
+    width: 22%;
+}
+
+.seatWrap .price{
+    width: 22%;
+    padding-right: 15px;
+    font-size: 26rpx;
+    color: #f90;
+    font-weight: bold;
+
+}
+.seatWrap .seatBtnWap{
+    width: 52%;
+}
+.seatWrap .seatBtnWap .btnGroup{
+    text-align: right;
+}
+
+.seatWrap .seatBtnWap .seatOrd{
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    position: relative;
+    top: 7px;
+    border: 1px solid #f90;
+    font-size: 28rpx;
+    color: #f90;
+}
+.seatWrap .seatBtnWap .num{
+    padding-right: 15px;
+}

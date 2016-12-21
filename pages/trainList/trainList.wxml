@@ -1,0 +1,43 @@
+<view class="container">
+    <view>
+        <view class="listTitleWrap"><text class="listTitle">{{date.day}} {{date.week}}</text></view>
+    </view>
+    <view class="listWrap">
+        <block wx:for="{{trainList}}" wx:for-item="train">
+            <view class="listItemWrap" catchtap="getDetail" data-listid="{{index}}">
+                <view class="list-cell list-cell-1">
+                    <text class="listTop">{{train.startTime}}</text>
+                    <view class="lists-lighter">{{train.endTime}}</view>
+                </view>
+                <view class="list-cell list-cell-2">
+                    <view>
+                        <text class="list-station list-startStation">始</text>
+                        <text>{{train.from}}</text>
+                    </view>
+                    <view class="lists-lighter">
+                        <text class="list-station list-endStation">终</text>
+                        <text>{{train.to}}</text>
+                    </view>
+                </view>
+                <view class="list-cell list-cell-3">
+                    <text class="listTop">{{train.trainNo}}</text>
+                    <view class="lists-lighter">{{train.duration}}</view>
+                </view>
+                <view class="list-cell list-cell-4">
+                    <view wx:if="{{train.seatInfos[1].remainNum >0}}">
+                        <text class="list-price">￥{{train.seatInfos[1].seatPrice}}</text>
+                        <view class="lists-lighter" >
+                            <text>{{train.seatInfos[1].seat}}</text>
+                            <text class="list-threshold">{{train.seatInfos[1].remainNum}}张</text>
+                        </view>
+                    </view>
+                    <view wx:else>
+                        <view class="lists-lighter">
+                            <text class="lists-sub">抢票</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
